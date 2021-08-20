@@ -1,0 +1,32 @@
+{
+  "version": "2.0",
+  "extensions": {
+    "serviceBus": {
+      "prefetchCount": 100,
+      "messageHandlerOptions": {
+        "autoComplete": false,
+        "maxConcurrentCalls": 32,
+        "maxAutoRenewDuration": "00:01:00"
+      },
+      "sessionHandlerOptions": {
+        "autoComplete": false,
+        "messageWaitTimeout": "00:00:30",
+        "maxAutoRenewDuration": "00:01:00",
+        "maxConcurrentSessions": 16
+      },
+      "batchOptions": {
+        "autoComplete": false,
+        "maxMessageCount": 1000,
+        "operationTimeout": "00:01:00"
+      }
+    }
+  },
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "excludedTypes": "Request"
+      }
+    }
+  }
+}
